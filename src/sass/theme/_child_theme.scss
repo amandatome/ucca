@@ -1,10 +1,11 @@
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
 body {
   line-height: 1.5em !important;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -14,25 +15,192 @@ h2 {
   font-weight: 700;
   padding: 2rem;
   max-width: 30rem;
-  // font-size: 2rem;
   color: $white;
   border-radius: 5px;
-  margin: 2rem 0 2rem 0;
+  margin-bottom: 2rem;
+  font-size: 24px;
 }
 
 h3 {
   border-bottom: $secondary solid 2px;
 }
 
-.hero {
-  border-bottom: $secondary solid 1px;
-  border-top: $secondary solid 1px;
-  background-color: #f7e8d320;
+
+// .header {
+//   border-bottom: solid 1px grey;
+// }
+
+#wrapper-navbar {
   a {
-    text-decoration: none!important;
+    border-bottom: none;
+    color: $black;
   }
 }
 
+.site-logo {
+  padding-right: 10px !important;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  max-width: 325px;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  color: $primary !important;
+
+  img {
+    margin-right: 5px;
+  }
+}
+
+.nav-link {
+  color: $black !important;
+
+  &:hover {
+    color: $primary !important;
+    text-decoration: underline;
+  }
+}
+
+.hero {
+  border-bottom: $secondary solid 1px;
+  border-top: $secondary solid 1px;
+  background-color: $background;
+
+  a {
+    text-decoration: none !important;
+  }
+}
+
+
 .quick-links {
-  background-image: linear-gradient(140deg, #ffffff 0% 65%, #c4d7e6 100%);
+  .card {
+    border: none !important;
+  }
+
+  ul {
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      content: "\f105";
+
+      &:before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        margin-right: 8px;
+        content: "\f105";
+      }
+    }
+  }
+}
+
+.staff-circle {
+  background-color: $accent;
+  padding-bottom: 1rem;
+}
+
+.image {
+  width: auto;
+}
+
+.fa-map-marker-alt {
+  color: $primary;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+body .gform_wrapper h2.gform_title {
+  display: none !important;
+}
+
+.general-info {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.contact {
+  background: linear-gradient(to bottom, $accent 0% 8%, $background 8% 38%, $primary 38% 100%);
+  padding: 2rem 0 0 0;
+  // margin-top: .5rem;
+}
+
+.form {
+  background-color: $white;
+  padding: 5rem;
+}
+
+
+//Footer=============================
+#wrapper-footer {
+  background: $primary;
+  color: $white;
+}
+
+footer {
+  margin-bottom: 0 !important;
+  h2 {
+      border-bottom: solid 3px $secondary!important;
+      font-size: calc(20px + (24 - 20) * ((100vw - 300px) / (1600 - 300)));
+  }
+  p,
+  a {
+      color: $white;
+  }
+  a {
+      text-decoration: none;
+
+      &:hover {
+          text-decoration: underline;
+          color: #d8d7d7ef;
+      }
+
+      &:visited {
+          color: $secondary;
+      }
+  }
+
+  ul {
+      padding: 0;
+
+      li {
+          list-style-type: none;
+          content: "\f105";
+
+          &:before {
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              margin-right: 8px;
+              content: "\f105";
+          }
+      }
+  }
+  .footer-area-five{
+      a {
+          text-decoration: underline!important;
+          text-decoration-color: $secondary!important;
+      }
+  }
+}
+
+
+.image {
+  display: block;
+}
+
+.list-division {
+  column-count: 3;
+  column-gap: 10px;
+  column-rule: none;
+}
+
+.card-footer {
+  background-color: white!important;
+  border: none!important;
+}
+
+.holdings {
+  background: linear-gradient(to bottom, $background 0% 30%, $accent 30% 100%);
 }

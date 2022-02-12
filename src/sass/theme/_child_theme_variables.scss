@@ -6,5 +6,26 @@
 $primary: #002B55;
 $secondary: #FFCC4E;
 $danger: #8d1919;
-$success:#40835E;
 $links: #044f99;
+$background:#f7e8d320;
+$accent: #c4d7e6;
+
+.background-one {
+  background:linear-gradient(to bottom,#ffffff 0%, #ffffff 0% 8%,#c4d7e6 8% 100%);
+  padding-bottom: 3rem;
+  h2 {
+    font-size: 24px;
+  }
+  .col-12 {
+      background-color: white!important;
+      padding: 2rem;
+  } 
+}
+
+.background-two {
+  background:linear-gradient(to bottom,$accent 0%, $accent 0% 15%,#ffffff 15% 100%);
+  padding-bottom: 2rem;
+  h2 {
+    font-size: 24px;
+  }
+}

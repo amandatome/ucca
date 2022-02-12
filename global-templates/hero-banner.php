@@ -3,10 +3,19 @@
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-4">
         <?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'large-banner', false); ?>
+        
+
+          <p class='text-center'><?php echo the_post_thumbnail_caption(); ?></p>
+
+
+
+
+
+
       </div>
       <div class="col-lg-8">
         <h1 class="display-5 fw-bold lh-1 mb-3"><?php the_title()?></h1>
-        <p class="lead"><?php the_field("home_text")?></p>
+       <?php the_field("header_text")?>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
         <?php
 

@@ -42,8 +42,8 @@ add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page();
-	
 }
+
 //Image Sizes
 if (!function_exists('theme_setup')) :
 	function theme_setup()
@@ -54,8 +54,9 @@ if (!function_exists('theme_setup')) :
 	*  sizes with add_image_size. */
     add_theme_support('post-thumbnails');
     add_image_size('large-banner', 700, 450, true);
-    add_image_size('card', 640, 400, array('left', 'bottom'));
-    add_image_size('logo', 80, 100, true);
+    add_image_size('column', 600, 300,);
+    add_image_size('card', 450);
+    add_image_size('logo', 90, 125, true);
 	}
 endif;
 add_action('after_setup_theme', 'theme_setup');
@@ -76,8 +77,8 @@ function fontawesome() {
     'font-awesome', //handle
     'https://kit.fontawesome.com/6b46070716.js',
     array(), //dependencies
-    '5.15.3', // version number
-    true //load in footer
+    '6.0.0', // version number
+    false //load in footer
   );
   }
   add_action('wp_enqueue_scripts', 'fontawesome');
@@ -288,9 +289,9 @@ function breadcrumbs()
 } // end breadcrumb()
 
 
-register_nav_menus( array(
-    'Archives' => 'Archives Navigation',
-) );
+// register_nav_menus( array(
+//     'Archives' => 'Archives Navigation',
+// ) );
 
 /* Add custom classes to list item "li" */
 
@@ -300,3 +301,15 @@ register_nav_menus( array(
 // } 
 
 // add_filter( 'nav_menu_css_class' , '_namespace_menu_item_class' , 10, 2 );
+
+// //Search to menu bar
+// add_filter('wp_nav_menu_items','add_search_box_to_menu', 10, 2);
+// function add_search_box_to_menu( $items, $args ) {
+//     if( $args->theme_location == 'primary' )
+//         return $items."<li class='menu-header-search'><form action='http://example.com/' id='searchform' method='get'><input type='text' name='s' id='s' placeholder='Search'></form></li>";
+ 
+//     return $items;
+// }
+
+
+
